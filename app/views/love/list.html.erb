@@ -1,0 +1,15 @@
+<div class="container">
+    <a class="btn btn-default" href="/new" role="button">인연 등록하기</a>
+    <hr>
+    <% @hosts.each do |h| %>
+    <a href="/show/<%=h.id%>">
+        <div class="alert gender_<%= h.gender %>" role="alert">
+            <div class="row">
+                <div class="col-md-3 alert-link"><%= h.name %></div>
+                <div class="col-md-1 alert-link"><%= h.age %>세</div>
+                <div class="col-md-8 alert-link"><%= h.title%> <span class="badge"><%= h.joins.count %></span></div>
+            </div>
+        </div>
+    </a>
+    <% end %>
+</div>

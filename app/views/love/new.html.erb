@@ -1,0 +1,45 @@
+<div class="container">
+    <form action="/new" method="post">
+    
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Name">
+      </div>
+      
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="pw" class="form-control" placeholder="Password">
+      </div>
+      
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="gender" value="true" checked>
+            Male  
+          </label>
+          <label>
+            <input type="radio" name="gender" value="false" >
+            Female
+          </label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label>Age</label>
+        <input type="text" name="age" class="form-control"  placeholder="Age">
+      </div>
+      
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="title" class="form-control"  placeholder="Title">
+      </div>
+      
+      <div class="form-group">
+        <label>Content</label>
+        <textarea name="content" class="form-control" rows="5" placeholder="Content"></textarea>
+      </div>
+      
+      <button class="btn btn-default" type="submit">등록하기</button>
+    </form>
+</div>

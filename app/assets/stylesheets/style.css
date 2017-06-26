@@ -1,0 +1,26 @@
+/* list 액션 */
+
+/*성별 (true= 남자, false= 여자)*/
+.gender_true {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.gender_true hr {
+  border-top-color: #a6e1ec;
+}
+.gender_true .gender-link {
+  color: #245269;
+}
+
+.gender_false {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.gender_false hr {
+  border-top-color: #e4b9c0;
+}
+.gender_false .gender-link {
+  color: #843534;
+}
