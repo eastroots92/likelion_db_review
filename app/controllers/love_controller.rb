@@ -16,7 +16,6 @@ class LoveController < ApplicationController
     
     @host = Host.new
     @host.name = params[:name]
-    @host.pw = params[:pw]
     @host.gender = params[:gender]
     @host.age = params[:age]
     @host.title = params[:title]
@@ -50,8 +49,10 @@ class LoveController < ApplicationController
     
     if(@list.gender)
       @gender = "남자"
+      @other = false
     else
       @gender = "여자"
+      @other = true
     end
   end
 end

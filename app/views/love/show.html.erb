@@ -10,25 +10,14 @@
         <p class="col-md-3">성별 : <%= @gender %></p>
       </div>
       <p>
-        <내용><br>
+        <hr>
         <%= @list.content %>
       </p>
-      <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">이성정보 보기</a></p>-->
+      <p><a class="btn btn-primary btn-lg" id="show_hidden"role="button">관심 등록하기</a></p>
+      
     </div>
     
-    <% @list.joins.each do |j| %>
-      <div class="alert gender_<%= j.gender %>" role="alert">
-        <div class="row">
-          <div class="col-md-3 alert-link"><%= j.name %></div>
-          <div class="col-md-3 alert-link"><%= j.age %>세</div>
-          <div class="col-md-6 alert-link"><%= j.title %>세</div>
-        </div>
-      </div>
-    <% end %>
-    
-    
-    
-    <div class="alert alert-warning" role="alert">
+    <div id="hidden" style="display:none" class="alert alert-warning" role="alert">
       <form class="form-horizontal" action="/join" method="post">
         
         <div class="form-group">
@@ -66,4 +55,25 @@
       </form>
     </div>
     
+    <% @list.joins.where(gender: @other).each do |j| %>
+      <div class="alert gender_<%= j.gender %>" role="alert">
+        <div class="row">
+          <div class="col-md-3 alert-link"><%= j.name %></div>
+          <div class="col-md-3 alert-link"><%= j.age %>세</div>
+          <div class="col-md-6 alert-link"><%= j.title %></div>
+        </div>
+      </div>
+    <% end %>
+    
+    
+    
+    
+    
 </div>
+
+<script>
+$('#show_hidden').click(function(){
+  $( "#hidden" ).fadeToggle( "fast", "linear" );
+ 
+});
+</script>

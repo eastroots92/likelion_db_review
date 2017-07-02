@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20170623171748) do
 
   create_table "hosts", force: :cascade do |t|
     t.string   "name",       null: false
-    t.string   "pw",         null: false
     t.string   "title",      null: false
     t.text     "content"
     t.integer  "age",        null: false
